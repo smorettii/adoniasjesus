@@ -276,10 +276,7 @@
         fadeIn(background);
         fadeIn(container);
 
-        if ((localStorage.getItem("visto") == null || localStorage.getItem("visto") == 'null')) {
-            localStorage.setItem("visto", 'sim')
-            document.getElementById("numero").innerHTML = await (await fetch('https://adoniasjesusapi.squareweb.app/visualizacoes', { method: 'GET', headers: { "Content-Type": "application/json" } })).text()
-        }
+        document.getElementById("numero").innerHTML = await (await fetch('https://adoniasjesusapi.squareweb.app/visualizacoes', { method: 'GET', headers: { "Content-Type": "application/json" } })).text()
     }
 
     index()
